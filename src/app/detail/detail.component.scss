@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+
+    li{
+        &.bold, span{
+            font-weight: bold;
+        }
+        line-height: 25px;
+    }
+}
+
