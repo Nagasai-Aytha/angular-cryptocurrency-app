@@ -1,16 +1,18 @@
-<table>
-    <tr>
-        <th>Coin Name</th>
-        <th>Symbol</th>
-        <th>Latest Price</th>
-        <th></th>
-    </tr>
-    <tr *ngFor="let item of coins">
-        <td>{{item.coin_name}}</td>
-        <td>{{item.coin_id}}</td>
-        <td>${{item.last_price | number : '1.2-2'}}</td>
-        <td>
-            <button skipLocationChange [routerLink]='["/detail", {data: item | json}]'>Details</button>
-        </td>
-    </tr>
-</table>
+<div>
+    <table>
+        <tr>
+            <th>Coin Name</th>
+            <th>Symbol</th>
+            <th>Latest Price</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let item of coins">
+            <td>{{item.coin_name}}</td>
+            <td>{{item.coin_id}}</td>
+            <td>${{item.last_price | number : '1.2-2'}}</td>
+            <td>
+                <button skipLocationChange [routerLink]='["/detail", {data: item | json}]'>Details</button>
+            </td>
+        </tr>
+    </table>
+</div>

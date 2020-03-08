@@ -1,4 +1,7 @@
-ul {
+div{
+    justify-content: center;
+    display: flex;
+  ul {
     list-style-type: none;
 
     li{
@@ -7,5 +10,6 @@ ul {
         }
         line-height: 25px;
     }
+  }
 }
 

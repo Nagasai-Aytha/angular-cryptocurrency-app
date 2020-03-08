@@ -8,13 +8,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
   data: any;
+  isDetailPage: boolean = true;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.data = JSON.parse(params['data']);
+    if (this.route && this.route.params) {
+      this.route.params.subscribe(params => {
+        if (params['data']) {
+          this.data = JSON.parse(params['data']);
+        }
+      }
+      );
     }
-    );
+
   }
 
 }

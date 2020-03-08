@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.assetService.getAssets().subscribe((response) => {
       this.coins = response;
-    });
+    }, err => console.log('HTTP Error', err));
   }
 
 }

@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { AssetTickersService } from '../asset-tickers.service';
+import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './list.component';
 
 describe('ListComponent', () => {
@@ -8,9 +9,11 @@ describe('ListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListComponent ]
+      declarations: [ListComponent],
+      imports: [HttpClientModule],
+      providers: [{ provide: AssetTickersService }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

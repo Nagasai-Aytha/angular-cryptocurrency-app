@@ -1,13 +1,15 @@
-<ul>
-    <li class="bold">{{data.coin_name}} | {{data.coin_id}}</li>
-    <li>
-        <span>Price:</span> ${{data.last_price | number:'1.2-2'}}</li>
-    <li>
-        <span>24-Hour Volume: </span>{{data.volume_24hr}}</li>
-    <li>
-        <span>$100 = </span>{{100/data.last_price}} coins</li>
-    <li>
-        <span>$250 = </span>{{250/data.last_price}} coins</li>
-    <li>
-        <span>$5,000 = </span>{{5000/data.last_price}} coins</li>
-</ul>
+<div>
+    <ul *ngIf="data">
+        <li class="bold">{{data.coin_name}} | {{data.coin_id}}</li>
+        <li>
+            <span>Price:</span> ${{data.last_price | number:'1.2-2'}}</li>
+        <li>
+            <span>24-Hour Volume: </span>{{data.volume_24hr}}</li>
+        <li>
+            <span>$100 = </span>{{100/data.last_price}} coins</li>
+        <li>
+            <span>$250 = </span>{{250/data.last_price}} coins</li>
+        <li>
+            <span>$5,000 = </span>{{5000/data.last_price}} coins</li>
+    </ul>
+</div>
